@@ -5,6 +5,22 @@ Vídeo: https://youtu.be/iJvLAZ8MJ2E?t=4112
 
 // 1. Crea una función que retorne a otra función
 
+
+    const suma = function (a ,b) {
+            console.log( a + b)
+    }
+    // esta funcion nos retorna  la funciont  padre
+    //ya que la funcion  imprime la  suma pardre  toca ponerla 
+    // en una costante para que se logro imprimir
+    function imprimir () {
+        return suma
+    }
+
+    const retunr_suma = imprimir()
+    // esto hara que se la suma diferetes   ya que  utilize metodos
+    retunr_suma(Math.floor(Math.random()*10), Math.floor(Math.random()*10))
+ 
+
 // 2. Implementa una función currificada que multiplique 3 números
 
 // 3. Desarrolla una función recursiva que calcule la potencia de un número elevado a un exponente
@@ -18,7 +34,23 @@ Vídeo: https://youtu.be/iJvLAZ8MJ2E?t=4112
 // 7. Desarrolla una función parcial
 
 // 8. Implementa un ejemplo que haga uso de Spread
-
+    const uno   = [4,2]
+    const dos = [3,2]
+    const Spread = [...uno,...dos]
+    console.log(Spread)
 // 9. Implementa un retorno implícito
-
+    const implícito = (a ,s, b) => (a / s)*b  
+    console.log(Math.floor(implícito(5,8,3)))
 // 10. Haz uso del this léxico
+    const lexico = {
+        name: "carlos",
+
+        saludo: function () {
+            console.log(`hola ${this.name}`)
+        }
+    }
+
+lexico.saludo()
+
+
+
