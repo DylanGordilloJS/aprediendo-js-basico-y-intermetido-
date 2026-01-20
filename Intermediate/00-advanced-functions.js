@@ -55,7 +55,7 @@ handler.arrowGreeting();
 
 // Parámetros Rest (...)
 
-function sum(...numbers) {
+ function sum(...numbers) {
     let result = 0
     for (let number of numbers) {
         result += number
@@ -76,7 +76,7 @@ function sumWithSpread(a, b, c) {
 console.log(sumWithSpread(1, 2, 3)) // Sin Spread
 console.log(sumWithSpread(...numbers)) // Con Spread
 
-// Closures (Clausuras)
+// Closures (Clausuras) closures
 
 function createCounter() {
     let counter = 0
@@ -121,7 +121,7 @@ function currySum(a) {
     return function (b) {
         return function (c) {
             return function (d) {
-                return sum(a, b, c, d)
+                return a + b + c + d
             }
         }
     }
@@ -136,7 +136,7 @@ console.log(sumAB(5)(7))
 // Callbacks
 
 function processData(data, callback) {
-    const result = sum(...data)
+    const result = sum(...data) 
     callback(result)
 }
 
