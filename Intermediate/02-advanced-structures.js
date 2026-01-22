@@ -22,7 +22,7 @@ console.log(doubled)
 
 let evens = numbers.filter(element => element % 2 === 0)
 console.log(evens)
-
+    
 // reduce
 
 let sum = numbers.reduce((result, current) => result + current, 0)
